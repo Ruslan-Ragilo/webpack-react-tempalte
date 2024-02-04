@@ -1,13 +1,12 @@
 import { Route, Routes } from "react-router-dom"
 import { Link } from "react-router-dom"
-import { MainAsync } from "./pages/Main/Main.async"
-import { AboutAsync } from "./pages/About/About.async"
-import { Suspense, useContext, useState } from "react"
+import { Suspense } from "react"
 import './styles/index.scss'
-import './App.scss'
-import { useTheme } from "../theme/useTheme"
-import { classNames } from "./helpers/classNames/classNames"
-import { Theme } from "../theme/ThemeContext"
+import { useTheme } from "./providers/ThemeProvider/lib/useTheme"
+import { Theme } from "./providers/ThemeProvider/lib/ThemeContext"
+import { AboutAsync } from "pages/About"
+import { MainAsync } from "pages/Main/ui/Main.async"
+import { classNames } from "shared/lib/classNames/classNames"
 
 const App = () => {
 
